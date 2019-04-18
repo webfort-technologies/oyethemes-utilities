@@ -66,13 +66,13 @@ class validation{
 			    	break; 
 			    case 'minMaxLen':
 			    	// minimum length validation
-			    	if ( self.data[key].length < (typeof validations[i].value[0] === 'undefined' ? 5 : validations[i].value[0])) {
-			    		array.push(`Value Should be greater than ${typeof validations[i].value[0] === 'undefined' ? 5 : validations[i].value[0]}`)
+			    	if ( self.data[key].length < (typeof validations[i].range[0] === 'undefined' ? 5 : validations[i].range[0])) {
+			    		array.push(`Value Should be greater than ${typeof validations[i].range[0] === 'undefined' ? 5 : validations[i].range[0]}`)
 			    	}
 
 			    	// maximum length validation
-			    	if ( self.data[key].length > (typeof validations[i].value[1] === 'undefined' ? 10 : validations[i].value[1])) {
-			    		array.push(`Value Should be less than ${typeof validations[i].value[1] === 'undefined' ? 5 : validations[i].value[1]}`)
+			    	if ( self.data[key].length > (typeof validations[i].range[1] === 'undefined' ? 10 : validations[i].range[1])) {
+			    		array.push(`Value Should be less than ${typeof validations[i].range[1] === 'undefined' ? 5 : validations[i].range[1]}`)
 			    	}
 			    	break;
 			    case 'required':
