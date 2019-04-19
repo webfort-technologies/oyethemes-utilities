@@ -102,18 +102,27 @@ class validation{
 		return array;
 	}
 
-	startValidate(){
+	startValidate(callback = undefined){
 		var self = this;
 		var validatedArray = [];
-
+		var errorCount = 0;
 		for (var i = 0; i < this.validate.length; i++) {
 			var temp = this.validateData(this.validate[i].validations,this.validate[i].key);
 			// console.log(temp);
 			// var values = {};
+			if (temp.length > 0) {
+				errorCount++;
+			}
+
 			validatedArray[this.validate[i].key] = { errorStatus: temp.length > 0 ? true : false , errors : temp };
 			// validatedArray.push( values );
 		}
+
+		if (typeof callback != undefined) {
+			return callback( validatedArray, errorCount );
+		}
 		// console.log(validatedArray);
+
 		return validatedArray;
 	}
 }
