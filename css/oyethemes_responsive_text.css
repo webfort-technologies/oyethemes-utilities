@@ -1,0 +1,160 @@
+/* -----------------------------------------*/
+/*  Oyethemes.com : Responsive text Utility */
+/* ---------------------------------------- */
+@media (min-width : 0px) {
+    .xs-text-5  { font-size: 5px; }
+    .xs-text-6  { font-size: 6px; }
+    .xs-text-7  { font-size: 7px; }
+    .xs-text-8  { font-size: 8px; }
+    .xs-text-9  { font-size: 9px; }
+    .xs-text-10 { font-size: 10px; }
+    .xs-text-11 { font-size: 11px; }
+    .xs-text-12 { font-size: 12px; }
+    .xs-text-13 { font-size: 13px; }
+    .xs-text-14 { font-size: 14px; }
+    .xs-text-15 { font-size: 15px; }
+    .xs-text-16 { font-size: 16px; }
+    .xs-text-17 { font-size: 17px; }
+    .xs-text-18 { font-size: 18px; }
+    .xs-text-19 { font-size: 19px; }
+    .xs-text-20 { font-size: 20px; }
+    .xs-text-21 { font-size: 21px; }
+    .xs-text-22 { font-size: 22px; }
+    .xs-text-23 { font-size: 23px; }
+    .xs-text-24 { font-size: 24px; }
+    .xs-text-30 { font-size: 30px; }
+    .xs-text-36 { font-size: 36px; }
+    .xs-text-48 { font-size: 48px; }
+    .xs-text-60 { font-size: 60px; }
+    .xs-text-64 { font-size: 64px; }
+    .xs-text-72 { font-size: 72px; }
+    .xs-text-96 { font-size: 96px; }
+}
+
+@media (min-width : 576px) {
+    .sm-text-8  { font-size: 8px; }
+    .sm-text-9  { font-size: 9px; }
+    .sm-text-10 { font-size: 10px; }
+    .sm-text-11 { font-size: 11px; }
+    .sm-text-12 { font-size: 12px; }
+    .sm-text-13 { font-size: 13px; }
+    .sm-text-14 { font-size: 14px; }
+    .sm-text-15 { font-size: 15px; }
+    .sm-text-16 { font-size: 16px; }
+    .sm-text-17 { font-size: 17px; }
+    .sm-text-18 { font-size: 18px; }
+    .sm-text-19 { font-size: 19px; }
+    .sm-text-20 { font-size: 20px; }
+    .sm-text-21 { font-size: 21px; }
+    .sm-text-22 { font-size: 22px; }
+    .sm-text-23 { font-size: 23px; }
+    .sm-text-24 { font-size: 24px; }
+    .sm-text-30 { font-size: 30px; }
+    .sm-text-36 { font-size: 36px; }
+    .sm-text-48 { font-size: 48px; }
+    .sm-text-60 { font-size: 60px; }
+    .sm-text-64 { font-size: 64px; }
+    .sm-text-72 { font-size: 72px; }
+    .sm-text-96 { font-size: 96px; }
+}
+
+@media (min-width : 768px) {
+    .md-text-8  { font-size: 8px; }
+    .md-text-9  { font-size: 9px; }
+    .md-text-10 { font-size: 10px; }
+    .md-text-11 { font-size: 11px; }
+    .md-text-12 { font-size: 12px; }
+    .md-text-13 { font-size: 13px; }
+    .md-text-14 { font-size: 14px; }
+    .md-text-15 { font-size: 15px; }
+    .md-text-16 { font-size: 16px; }
+    .md-text-17 { font-size: 17px; }
+    .md-text-18 { font-size: 18px; }
+    .md-text-19 { font-size: 19px; }
+    .md-text-20 { font-size: 20px; }
+    .md-text-21 { font-size: 21px; }
+    .md-text-22 { font-size: 22px; }
+    .md-text-23 { font-size: 23px; }
+    .md-text-24 { font-size: 24px; }
+    .md-text-30 { font-size: 30px; }
+    .md-text-36 { font-size: 36px; }
+    .md-text-48 { font-size: 48px; }
+    .md-text-60 { font-size: 60px; }
+    .md-text-64 { font-size: 64px; }
+    .md-text-72 { font-size: 72px; }
+    .md-text-96 { font-size: 96px; }
+}
+
+@media (min-width : 992px) {
+    .lg-text-8  { font-size: 8px; }
+    .lg-text-9  { font-size: 9px; }
+    .lg-text-10 { font-size: 10px; }
+    .lg-text-11 { font-size: 11px; }
+    .lg-text-12 { font-size: 12px; }
+    .lg-text-13 { font-size: 13px; }
+    .lg-text-14 { font-size: 14px; }
+    .lg-text-15 { font-size: 15px; }
+    .lg-text-16 { font-size: 16px; }
+    .lg-text-17 { font-size: 17px; }
+    .lg-text-18 { font-size: 18px; }
+    .lg-text-19 { font-size: 19px; }
+    .lg-text-20 { font-size: 20px; }
+    .lg-text-21 { font-size: 21px; }
+    .lg-text-22 { font-size: 22px; }
+    .lg-text-23 { font-size: 23px; }
+    .lg-text-24 { font-size: 24px; }
+    .lg-text-30 { font-size: 30px; }
+    .lg-text-36 { font-size: 36px; }
+    .lg-text-48 { font-size: 48px; }
+    .lg-text-60 { font-size: 60px; }
+    .lg-text-64 { font-size: 64px; }
+    .lg-text-72 { font-size: 72px; }
+    .lg-text-96 { font-size: 96px; }
+}
+
+@media (min-width : 1200px) {
+    .xl-text-8  { font-size: 8px; }
+    .xl-text-9  { font-size: 9px; }
+    .xl-text-10 { font-size: 10px; }
+    .xl-text-11 { font-size: 11px; }
+    .xl-text-12 { font-size: 12px; }
+    .xl-text-13 { font-size: 13px; }
+    .xl-text-14 { font-size: 14px; }
+    .xl-text-15 { font-size: 15px; }
+    .xl-text-16 { font-size: 16px; }
+    .xl-text-17 { font-size: 17px; }
+    .xl-text-18 { font-size: 18px; }
+    .xl-text-19 { font-size: 19px; }
+    .xl-text-20 { font-size: 20px; }
+    .xl-text-21 { font-size: 21px; }
+    .xl-text-22 { font-size: 22px; }
+    .xl-text-23 { font-size: 23px; }
+    .xl-text-24 { font-size: 24px; }
+    .xl-text-30 { font-size: 30px; }
+    .xl-text-36 { font-size: 36px; }
+    .xl-text-48 { font-size: 48px; }
+    .xl-text-60 { font-size: 60px; }
+    .xl-text-64 { font-size: 64px; }
+    .xl-text-72 { font-size: 72px; }
+    .xl-text-96 { font-size: 96px; }
+}
+/* -------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
