@@ -43,56 +43,81 @@ class validation{
 		var self = this;
 		var array = [];
 		var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		var requierd = false;
 		for (var i = 0; i < validations.length; i++) {
+			
+			var index = validations.map(function(data){ return data.type }).indexOf('required');
 
 			switch(validations[i].type) {
 			  	case 'email':
-			    	// email validation
-			    	if (!emailRegex.test(String(self.data[key]).toLowerCase())) {
-			    		array.push(`Email is not valid`);
-			    	}
+					if (index == -1 || requierd) {
+						// email validation
+						if (!emailRegex.test(String(self.data[key]).toLowerCase())) {
+							array.push(`Email is not valid`);
+						}
+					}
 			    	break;
-			  	case 'minLen':
-			    	// minimun length validation
-			    	if ( self.data[key].length < (typeof validations[i].value === 'undefined' ? 5 : validations[i].value)) {
-			    		array.push(`Value Should be greater than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value}`)
-			    	}
+				case 'minLen':// Input should be greater than 3 characters
+					if (index == -1 || requierd) {
+						// minimun length validation
+						if ( self.data[key].length < (typeof validations[i].value === 'undefined' ? 5 : validations[i].value)) {
+							array.push(`Input should be greater than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value} characters`)
+						}
+					}
 			    	break;
 			    case 'maxLen':
-			    	// maximum length validation
-			    	if ( self.data[key].length > (typeof validations[i].value === 'undefined' ? 10 : validations[i].value)) {
-			    		array.push(`Value Should be less than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value}`)
-			    	}
+					if (index == -1 || requierd) {
+						// maximum length validation
+						if ( self.data[key].length > (typeof validations[i].value === 'undefined' ? 10 : validations[i].value)) {
+							array.push(`Input should be less than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value} characters`)
+						}
+					}
 			    	break; 
 			    case 'minMaxLen':
-			    	// minimum length validation
-			    	if ( self.data[key].length < (typeof validations[i].range[0] === 'undefined' ? 5 : validations[i].range[0])) {
-			    		array.push(`Value Should be greater than ${typeof validations[i].range[0] === 'undefined' ? 5 : validations[i].range[0]}`)
-			    	}
-
-			    	// maximum length validation
-			    	if ( self.data[key].length > (typeof validations[i].range[1] === 'undefined' ? 10 : validations[i].range[1])) {
-			    		array.push(`Value Should be less than ${typeof validations[i].range[1] === 'undefined' ? 5 : validations[i].range[1]}`)
-			    	}
+					if (index == -1 || requierd) {
+						// minimum length validation
+						if ( self.data[key].length < (typeof validations[i].range[0] === 'undefined' ? 5 : validations[i].range[0])) {
+							array.push(`Input should be greater than ${typeof validations[i].range[0] === 'undefined' ? 5 : validations[i].range[0]} characters`)
+						}
+	
+						// maximum length validation
+						if ( self.data[key].length > (typeof validations[i].range[1] === 'undefined' ? 10 : validations[i].range[1])) {
+							array.push(`Input should be less than ${typeof validations[i].range[1] === 'undefined' ? 5 : validations[i].range[1]} characters`)
+						}
+					}
 			    	break;
 			    case 'required':
+					requierd = true;
 			    	// maximum length validation
 			    	if ( self.data[key].trim() == '' ) {
-			    		array.push(`This Field is Required`);
+						array.push(`This Field is Required`);
+						requierd = false;
 			    	}
 			    	break;
 			    case 'minVal':
-			    	// minimum value validation
-			    	if ( parseInt(self.data[key]) < (typeof validations[i].value === 'undefined' ? 10 : validations[i].value) ) {
-			    		array.push(`Value Should be greater than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value}`)
-			    	}
+					if (index == -1 || requierd) {
+						// minimum value validation
+						if ( parseInt(self.data[key]) < (typeof validations[i].value === 'undefined' ? 10 : validations[i].value) ) {
+							array.push(`Value Should be greater than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value}`)
+						}
+					}
 			    	break;
 			    case 'maxVal':
-			    	// maximum length validation
-			    	if ( self.data[key].length > (typeof validations[i].value === 'undefined' ? 10 : validations[i].value)) {
-			    		array.push(`Value Should be less than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value}`)
-			    	}
-			    	break; 
+					if (index == -1 || requierd) {
+						// maximum length validation
+						if ( self.data[key].length > (typeof validations[i].value === 'undefined' ? 10 : validations[i].value)) {
+							array.push(`Value Should be less than ${typeof validations[i].value === 'undefined' ? 5 : validations[i].value}`)
+						}
+					}
+					break;
+				case 'numeric':
+					if (index == -1 || requierd) {
+						// maximum length validation
+						if (isNaN(self.data[key])) {
+							array.push(`Entered value is not a number`);
+						}
+					}
+					break; 
 			  	default:
 			    	// if validation doesn't exists 
 			    	console.log(`${validations[i].type} is not present in library. Please Check misspelling. Thank You`);
