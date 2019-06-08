@@ -1,0 +1,25 @@
+.cursor-pointer 
+{
+	cursor: pointer;
+}
+
+.right-0
+{
+	right:0;
+}
+
+.ta-5
+{
+	transition: all .5s; 
+}
+
+.position-absolute-vertical-center 
+{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+	
