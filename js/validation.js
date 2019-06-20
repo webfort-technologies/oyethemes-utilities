@@ -20,7 +20,7 @@ class validation{
 	}
 
 	static generateErrorArray(data){
-		var array = [];
+		var array = {};
 		for (var key in data) {
 		  	if (data.hasOwnProperty(key)) {
 		    	// var val = data[key];
