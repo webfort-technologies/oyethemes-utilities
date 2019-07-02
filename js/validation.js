@@ -129,7 +129,7 @@ class validation{
 
 	startValidate(callback = undefined){
 		var self = this;
-		var validatedArray = [];
+		var validatedArray = {};
 		var errorCount = 0;
 		for (var i = 0; i < this.validate.length; i++) {
 			var temp = this.validateData(this.validate[i].validations,this.validate[i].key);
